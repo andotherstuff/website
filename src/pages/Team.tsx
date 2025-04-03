@@ -8,33 +8,27 @@ const Team = () => {
   const team = [
     {
       name: "Rabble",
-      role: "Lead",
+      role: "",
       pillar: "UX & Onboarding",
       color: "#8B5CF6", // nostr-purple
     },
     {
       name: "Alex",
-      role: "Lead",
+      role: "",
       pillar: "Communities",
       color: "#0EA5E9", // nostr-blue
     },
     {
       name: "JeffG",
-      role: "Lead",
+      role: "",
       pillar: "Private Communication",
       color: "#22C55E", // nostr-green
     },
     {
       name: "Calle",
-      role: "Lead",
+      role: "",
       pillar: "Commerce",
       color: "#F97316", // nostr-orange
-    },
-    {
-      name: "",
-      role: "Lead",
-      pillar: "AI",
-      color: "#D946EF", // nostr-pink
     }
   ];
 
@@ -56,7 +50,7 @@ const Team = () => {
         
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {team.map((member, index) => (
                 <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                   <TeamMember {...member} />
