@@ -127,19 +127,19 @@ const Structure = () => {
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-start">
                         <ArrowRight className="h-4 w-4 text-nostr-green mt-1 mr-2 flex-shrink-0" />
-                        <span>Arabic community</span>
+                        <span>Track new community engagements</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-4 w-4 text-nostr-green mt-1 mr-2 flex-shrink-0" />
-                        <span>Bitcoin Costa Rica community</span>
+                        <span>Measure community participation and retention</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-4 w-4 text-nostr-green mt-1 mr-2 flex-shrink-0" />
-                        <span>Underground techno community</span>
+                        <span>Monitor cross-community collaboration</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-4 w-4 text-nostr-green mt-1 mr-2 flex-shrink-0" />
-                        <span>Onboard X new communities</span>
+                        <span>Evaluate community growth and sustainability</span>
                       </li>
                     </ul>
                   </div>
