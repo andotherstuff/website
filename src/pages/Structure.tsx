@@ -38,35 +38,6 @@ const Structure = () => {
                     dedicated to nurturing the Nostr ecosystem. Currently, we are fiscally sponsored via 
                     <a href="https://opencollective.com/europe" target="_blank" rel="noopener noreferrer" className="text-nostr-purple font-medium hover:underline"> Open Collective Europe</a>.
                   </p>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="font-semibold mb-2">Dual-Track Approach</h3>
-                    <p className="text-gray-600 mb-3">
-                      During the IRS approval process, which typically takes 12-18 months, we will operate through 
-                      our fiscal sponsor to enable immediate impact.
-                    </p>
-                    <ul className="space-y-2 text-gray-600">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-4 w-4 text-nostr-purple mt-1 mr-2 flex-shrink-0" />
-                        <span>Begin distributing grants and supporting critical development work immediately through our fiscal sponsor, Open Collective Europe</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-4 w-4 text-nostr-purple mt-1 mr-2 flex-shrink-0" />
-                        <span>Build out "and Other Stuff" as a new, focused nonprofit entity</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-4 w-4 text-nostr-purple mt-1 mr-2 flex-shrink-0" />
-                        <span>Establish robust financial controls and reporting mechanisms</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-4 w-4 text-nostr-purple mt-1 mr-2 flex-shrink-0" />
-                        <span>Create operational processes that reflect community needs and values</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <p className="text-gray-600">
-                    The funding will be split between an initial tranche through the fiscal sponsor and 
-                    subsequent funding through the new organization once established.
-                  </p>
                 </CardContent>
               </Card>
               
