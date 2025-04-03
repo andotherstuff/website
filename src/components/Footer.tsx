@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Twitter } from 'lucide-react';
+import { Github, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -27,8 +27,8 @@ const Footer = () => {
             <a href="https://github.com/andotherstuff-org" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
               <Github className="h-5 w-5" />
             </a>
-            <a href="https://twitter.com/andotherstuff_org" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
-              <Twitter className="h-5 w-5" />
+            <a href="nostr:npub1andotherstfforg" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+              <MessageCircle className="h-5 w-5" />
             </a>
           </div>
         </div>
