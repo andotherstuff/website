@@ -11,18 +11,21 @@ const Team = () => {
       role: "",
       pillar: "UX & Onboarding",
       color: "#8B5CF6", // nostr-purple
+      profileUrl: "https://npub.world/npub1wmr34t36fy03m8hvgl96zl3znndyzyaqhwmwdtshwmtkg03fetaqhjg240"
     },
     {
       name: "Alex",
       role: "",
       pillar: "Communities",
       color: "#0EA5E9", // nostr-blue
+      profileUrl: "https://npub.world/npub1q3sle0kvfsehgsuexttt3ugjd8xdklxfwwkh559wxckmzddywnws6cd26p"
     },
     {
       name: "JeffG",
       role: "",
       pillar: "Private Communication",
       color: "#22C55E", // nostr-green
+      profileUrl: "https://npub.world/npub1zuuajd7u3sx8xu92yav9jwxpr839cs0kc3q6t56vd5u9q033xmhsk6c2uc"
     },
     {
       name: "Calle",
