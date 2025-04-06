@@ -14,3 +14,4 @@
 - Updated team members with npub profile links
 - Updated funding information to reference StartSmall foundation grant
 - Improved grid layout for team page to accommodate five members
+- Removed Lovable references and updated sharing links to Cloudflare Pages URL
