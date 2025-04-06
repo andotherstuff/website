@@ -29,6 +29,13 @@ const Team = () => {
       role: "",
       pillar: "Commerce",
       color: "#F97316", // nostr-orange
+    },
+    {
+      name: "Jack",
+      role: "",
+      pillar: "Infrastructure",
+      color: "#EC4899", // nostr-pink
+      profileUrl: "https://npub.world/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m"
     }
   ];
 
@@ -50,7 +57,7 @@ const Team = () => {
         
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {team.map((member, index) => (
                 <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                   <TeamMember {...member} />
