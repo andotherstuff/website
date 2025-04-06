@@ -1,0 +1,3 @@
+name = "andotherstuff"
+compatibility_date = "2025-04-06"
+pages_build_output_dir = "dist"
