@@ -1,22 +1,18 @@
-# Welcome to your Lovable project
+# andOtherStuff
+
+A collaborative Nostr funding initiative to develop strategic pillars for the Nostr ecosystem.
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/89ffcc1e-8a0e-4e1a-8f64-d9e403c65d45
+**URL**: https://andotherstuff.pages.dev
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/89ffcc1e-8a0e-4e1a-8f64-d9e403c65d45) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+There are several ways of editing this application.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,10 +58,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-### Option 1: Using Lovable
-Simply open [Lovable](https://lovable.dev/projects/89ffcc1e-8a0e-4e1a-8f64-d9e403c65d45) and click on Share -> Publish.
-
-### Option 2: Using Cloudflare Pages
+### Using Cloudflare Pages
 This project is configured to deploy to Cloudflare Pages. You can deploy manually or use GitHub Actions for automated deployments.
 
 **Manual deployment:**
@@ -74,16 +67,14 @@ This project is configured to deploy to Cloudflare Pages. You can deploy manuall
 npm run build
 
 # Deploy to Cloudflare Pages
-npm run deploy
+CLOUDFLARE_ACCOUNT_ID=your_account_id npm run deploy
 ```
 
 **GitHub Actions:**
 The project includes a GitHub workflow file that automatically deploys to Cloudflare Pages when pushing to the main branch.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain?
 
-Yes it is!
+Yes, you can connect a custom domain to the Cloudflare Pages site.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To connect a domain, navigate to your Cloudflare Pages project > Settings > Custom domains and follow the instructions.
