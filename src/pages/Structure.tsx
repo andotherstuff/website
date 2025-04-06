@@ -50,7 +50,7 @@ const Structure = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-600">
-                    The grant request amount is $10,000,000 USD to support the development of the five strategic pillars.
+                    andOtherStuff is funded with a generous grant of $10,000,000 USD from the StartSmall foundation to support the development of the five strategic pillars.
                   </p>
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h3 className="font-semibold mb-2">Accountability Measures</h3>
