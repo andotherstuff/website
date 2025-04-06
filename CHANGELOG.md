@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.0] - 2025-04-06
 
 ### Added
 - Cloudflare Pages deployment configuration
@@ -9,6 +9,7 @@
 - CLAUDE.md file with project guidelines
 - Jack added to team with Infrastructure pillar
 - SPA routing configuration for Cloudflare Pages
+- DOCUMENTATION.md file with project documentation
 
 ### Changed
 - Updated team members with npub profile links
