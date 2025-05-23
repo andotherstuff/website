@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
@@ -30,6 +29,15 @@ const Navbar = () => {
           <Link to="/pillars" className="text-gray-700 hover:text-nostr-purple transition">Strategic Pillars</Link>
           <Link to="/team" className="text-gray-700 hover:text-nostr-purple transition">Team</Link>
           <Link to="/structure" className="text-gray-700 hover:text-nostr-purple transition">Organization</Link>
+          <a 
+            href="https://github.com/andotherstuff" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-gray-700 hover:text-nostr-purple transition flex items-center space-x-1"
+          >
+            <Github className="h-4 w-4" />
+            <span>GitHub</span>
+          </a>
         </div>
         
         {/* Mobile Navigation */}
@@ -57,6 +65,16 @@ const Navbar = () => {
               >
                 Organization
               </Link>
+              <a 
+                href="https://github.com/andotherstuff" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex items-center space-x-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Github className="h-4 w-4" />
+                <span>GitHub</span>
+              </a>
             </div>
           </div>
         )}
@@ -66,3 +84,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+EOF 2>&1

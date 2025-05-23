@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-4">
-            <a href="https://github.com/andotherstuff-org" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+            <a href="https://github.com/andotherstuff" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
               <Github className="h-5 w-5" />
             </a>
             <a href="nostr:npub1andotherstfforg" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
