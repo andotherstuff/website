@@ -84,4 +84,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-EOF 2>&1
