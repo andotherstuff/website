@@ -21,6 +21,7 @@ const Footer = () => {
             <Link to="/pillars" className="text-sm text-gray-600 hover:text-nostr-purple">Strategic Pillars</Link>
             <Link to="/team" className="text-sm text-gray-600 hover:text-nostr-purple">Team</Link>
             <Link to="/structure" className="text-sm text-gray-600 hover:text-nostr-purple">Organization</Link>
+            <a href="https://chorus.community" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-nostr-purple">Chorus Community</a>
           </div>
           
           <div className="flex space-x-4">

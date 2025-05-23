@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1] - 2025-05-23
+
+### Added
+- Subtle link to chorus.community in the footer navigation
+
+### Fixed
+- Removed erroneous EOF syntax error from Navbar.tsx that was causing GitHub Actions build failure
+
 ## [1.0.0] - 2025-04-06
 
 ### Added
