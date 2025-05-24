@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-4 border-t border-gray-200 text-center text-sm text-gray-600">
-          <p>© {new Date().getFullYear()} andotherstuff.org</p>
+          <p>vibed in {new Date().getFullYear()} by andotherstuff.org</p>
         </div>
       </div>
     </footer>
