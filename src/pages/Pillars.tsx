@@ -29,7 +29,7 @@ const Pillars = () => {
       icon: Users,
       initiatives: [
         "Creating public and private communities (or \"groups\") on Nostr",
-        "Evaluating and improving NIP-29 for relay-based group implementation",
+        "Evaluating and improving NIPs for group implementation, including 72, 29, and 28",
         "Ensuring compatibility between multiple Nostr community implementations",
         "Building bridges between different group protocols and clients",
         "Encouraging content creators and existing communities to move to Nostr",
