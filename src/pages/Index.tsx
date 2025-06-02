@@ -158,6 +158,88 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        <section className="py-16 bg-gradient-to-br from-nostr-purple/10 to-nostr-blue/10">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-gray-900">Introducing Chorus</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                The future of decentralized communities is here. Join, create, and participate in 
+                censorship-resistant groups powered by the Nostr protocol.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <div className="order-2 lg:order-1">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold text-gray-900">
+                    Decentralized Groups, Reimagined
+                  </h3>
+                  <div className="space-y-4 text-gray-600">
+                    <p>
+                      Chorus brings the power of decentralized communities to Nostr, enabling 
+                      true freedom of association without central control or censorship.
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <span className="text-nostr-purple font-bold mr-2">•</span>
+                        <span>Create and join groups with complete autonomy</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-nostr-blue font-bold mr-2">•</span>
+                        <span>Censorship-resistant communication</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-nostr-orange font-bold mr-2">•</span>
+                        <span>Built on open Nostr protocol standards (NIP-72)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-nostr-green font-bold mr-2">•</span>
+                        <span>Progressive Web App for seamless mobile experience</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="pt-4">
+                    <Button 
+                      asChild 
+                      size="lg" 
+                      className="bg-gradient-to-r from-nostr-purple to-nostr-blue hover:from-nostr-purple/90 hover:to-nostr-blue/90 text-white"
+                    >
+                      <a 
+                        href="https://chorus.community" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center"
+                      >
+                        Explore Chorus
+                        <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="aspect-video rounded-lg overflow-hidden shadow-2xl">
+                    <iframe
+                      src="https://www.youtube.com/embed/B8fc1XJSB68"
+                      title="Chorus Launch Video"
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-nostr-purple to-nostr-blue rounded-full opacity-20"></div>
+                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-nostr-orange to-nostr-pink rounded-full opacity-20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
