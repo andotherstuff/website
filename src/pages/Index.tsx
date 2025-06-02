@@ -233,8 +233,6 @@ const Index = () => {
                       allowFullScreen
                     ></iframe>
                   </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-nostr-purple to-nostr-blue rounded-full opacity-20"></div>
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-nostr-orange to-nostr-pink rounded-full opacity-20"></div>
                 </div>
               </div>
             </div>
