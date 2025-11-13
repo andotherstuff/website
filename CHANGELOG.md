@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.2] - 2025-11-13
+
+### Added
+- Projects showcase section featuring all five key projects
+- New ProjectCard component for displaying project information
+- Featured projects: Chorus, cashu.space, White Noise, shakespear.diy, and divine.video
+- Each project card includes pillar badge, description, icon, and external link
+
+### Changed
+- Replaced dedicated Chorus section with unified projects grid
+- Updated divine.video description to emphasize authentic human content (no AI slop)
+
 ## [1.0.1] - 2025-05-23
 
 ### Added
