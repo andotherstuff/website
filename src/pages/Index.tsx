@@ -195,12 +195,12 @@ const Index = () => {
                 url="https://whitenoise.chat"
               />
               <ProjectCard
-                name="shakespear.diy"
+                name="shakespeare.diy"
                 description="AI-powered content creation and discovery tools for the Nostr ecosystem. Making AI accessible and integrated into decentralized social networks."
                 pillarName="AI"
                 pillarColor="#D946EF"
                 icon={Brain}
-                url="https://shakespear.diy"
+                url="https://shakespeare.diy"
               />
               <ProjectCard
                 name="divine.video"
