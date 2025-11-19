@@ -574,7 +574,10 @@
     <footer>
       <div class="shell">
         <div class="footer-inner">
-          <div>© <span id="year"></span> AOS. Built for human thriving.</div>
+          <div>
+            <a href="https://github.com/andotherstuff" target="_blank" rel="noopener noreferrer">Open Source</a> ·
+            Built for human thriving
+          </div>
           <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="index.html#purpose">Our Purpose</a>
@@ -589,8 +592,6 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
     // Handle interest form submission
     document.getElementById("interestForm").addEventListener("submit", function(e) {
       e.preventDefault();
