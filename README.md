@@ -10,6 +10,8 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 **URL**: TBD (will be configured on Cloudflare Pages)
 
+**Preview**: https://new-aos-website.shakespeare.wtf/
+
 **Type**: Static HTML website
 
 ## Local Development
