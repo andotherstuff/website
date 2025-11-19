@@ -135,28 +135,6 @@ git push
 
 **Note:** For local development with `npm run dev`, you can edit the files at the root and see changes immediately. The sync to `public/` is only needed before deployment.
 
-## Custom Domain
-
-To connect a custom domain to your Cloudflare Pages site:
-
-1. Navigate to your Cloudflare Pages project
-2. Go to Settings > Custom domains
-3. Add your domain and follow the DNS configuration instructions
-
-## Technologies Used
-
-- Pure HTML5 with semantic markup
-- Modern CSS3 with custom properties
-- Vanilla JavaScript (minimal, only for dynamic year and form handling)
-- No frameworks, no dependencies, no build step!
-
-## Browser Support
-
-- ✅ Chrome/Edge (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
 ## Contributing
 
 We welcome contributions! To contribute:
