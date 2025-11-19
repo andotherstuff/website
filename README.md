@@ -10,48 +10,7 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 **URL**: TBD (will be configured on Cloudflare Pages)
 
-**Type**: Static HTML website (no build step required)
-
-## Project Structure
-
-```
-.
-├── index.html                  # Main landing page
-├── hubs.html                   # Lab, Studio, and Foundry information
-├── express-interest.html       # Contact/interest form
-├── public/                     # Deployment directory
-│   ├── index.html             # (copy of root index.html)
-│   ├── hubs.html              # (copy of root hubs.html)
-│   ├── express-interest.html  # (copy of root express-interest.html)
-│   ├── AOS_Official.svg       # Main logo
-│   ├── logos/                 # Project logos for Foundry showcase
-│   │   ├── shakespeare.svg
-│   │   ├── Divine-512.png
-│   │   ├── whitenoise.svg
-│   │   ├── flotilla.webp
-│   │   ├── cashu.png
-│   │   ├── chorus.svg
-│   │   ├── bitchat.png
-│   │   └── gitlab-logo-600-rgb.svg
-│   ├── _routes.json           # Cloudflare Pages routing config
-│   └── robots.txt             # (optional) SEO configuration
-├── .github/
-│   └── workflows/
-│       └── deploy.yml         # GitHub Actions workflow for auto-deploy
-├── wrangler.toml              # Cloudflare Pages configuration
-└── README.md                  # This file
-```
-
-## Features
-
-- ✨ Clean, accessible design with modern UI
-- 📱 Fully responsive layout (mobile-first)
-- ⚡ Lightning-fast loading (pure HTML/CSS, no build step)
-- ♿ WCAG accessibility compliant
-- 🎨 Beautiful gradients and smooth animations
-- 🔗 Information about AOS Collective's mission and projects
-- 🚀 Featured Foundry projects showcase
-- 📝 Interest form for joining the collective
+**Type**: Static HTML website
 
 ## Local Development
 
