@@ -461,7 +461,7 @@
     <header>
       <div class="shell">
         <nav class="nav" aria-label="Main navigation">
-          <a href="Index.html" class="brand">
+          <a href="index.html" class="brand">
             <div class="brand-logo-wrap" aria-hidden="true">
               <img src="AOS_Official.svg" alt="AOS Collective logo" class="brand-logo" />
             </div>
@@ -471,8 +471,8 @@
             </div>
           </a>
           <div class="nav-links">
-            <a href="Index.html#purpose">Our Purpose</a>
-            <a href="Index.html#practices">Our Practices</a>
+            <a href="index.html#purpose">Our Purpose</a>
+            <a href="index.html#practices">Our Practices</a>
             <a href="hubs.html">Our Hubs</a>
             <a href="express-interest.html">Join Us</a>
             <a href="https://opencollective.com/aos-collective" target="_blank" rel="noopener noreferrer">
@@ -560,9 +560,9 @@
         <div class="footer-inner">
           <div>© <span id="year"></span> AOS Collective. Built for human thriving.</div>
           <div class="footer-links">
-            <a href="Index.html">Home</a>
-            <a href="Index.html#purpose">Our Purpose</a>
-            <a href="Index.html#practices">Our Practices</a>
+            <a href="index.html">Home</a>
+            <a href="index.html#purpose">Our Purpose</a>
+            <a href="index.html#practices">Our Practices</a>
             <a href="hubs.html">Our Hubs</a>
             <a href="express-interest.html">Join Us</a>
             <a href="https://opencollective.com/aos-collective" target="_blank" rel="noopener noreferrer">Donate</a>
@@ -578,13 +578,13 @@
     // Handle interest form submission
     document.getElementById("interestForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      
+
       // Get form data
       const formData = new FormData(this);
-      
+
       // Get all checked interests (checkboxes)
       const interests = formData.getAll('interest');
-      
+
       // Build data object
       const data = {
         name: formData.get('name'),
@@ -592,17 +592,17 @@
         interests: interests,
         message: formData.get('message')
       };
-      
+
       // Here you would typically send the data to your backend
       // For now, we'll just show an alert and log to console
       console.log("Form submission:", data);
-      
+
       // Show success message
       alert("Thank you for your interest! We'll be in touch soon.");
-      
+
       // Reset form
       this.reset();
-      
+
       // In production, you would send this to your backend:
       // fetch('/api/interest', {
       //   method: 'POST',

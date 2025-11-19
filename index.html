@@ -1448,40 +1448,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Handle interest form submission
-    document.getElementById("interestForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      // Here you would typically send the data to your backend
-      // For now, we'll just show an alert and log to console
-      console.log("Form submission:", data);
-      
-      // Show success message
-      alert("Thank you for your interest! We'll be in touch soon.");
-      
-      // Reset form
-      this.reset();
-      
-      // In production, you would send this to your backend:
-      // fetch('/api/interest', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data)
-      // })
-      // .then(response => response.json())
-      // .then(data => {
-      //   alert("Thank you for your interest! We'll be in touch soon.");
-      //   this.reset();
-      // })
-      // .catch(error => {
-      //   alert("Something went wrong. Please try again or contact us directly.");
-      // });
-    });
   </script>
 </body>
 </html>
