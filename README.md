@@ -2,6 +2,8 @@
 
 Technology for Human Thriving
 
+[![Edit with Shakespeare](https://shakespeare.diy/badge.svg)](https://shakespeare.diy/clone?url=https%3A%2F%2Fgithub.com%2Fandotherstuff%2Fwebsite.git)
+
 A simple, fast, and accessible static website for AOS Collective - building freedom tech that enhances, enables, and extends human liberty.
 
 ## Project Info
@@ -53,8 +55,6 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 ## Local Development
 
-### Quick Start
-
 ```sh
 # Install dependencies
 npm install
@@ -64,22 +64,6 @@ npm run dev
 ```
 
 This will start a Vite development server at http://localhost:8000 with hot module reloading. Changes to HTML files will automatically refresh the browser.
-
-### Alternative Methods
-
-**Using Python:**
-```sh
-python3 -m http.server 8000
-```
-
-**Using Node.js http-server:**
-```sh
-npm install -g http-server
-http-server -p 8000
-```
-
-**Using Shakespeare:**
-This project is designed to work with [Shakespeare](https://shakespeare.diy), an AI-powered website builder. Just open the project and the preview will automatically load.
 
 ## Deployment
 
