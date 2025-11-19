@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["fs:/projects/website/src/main.js"],
-  "sourcesContent": ["// AOS Collective Website\n// This is a static HTML website with minimal JavaScript\n\nconsole.log('AOS Collective - Technology for Human Thriving');\n"],
-  "mappings": ";AAGA,QAAQ,IAAI,gDAAgD;",
-  "names": []
-}
