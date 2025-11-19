@@ -76,65 +76,6 @@ npm run build
 wrangler pages deploy dist --project-name=aos-collective
 ```
 
-## Making Changes
-
-### Editing Content
-
-All content is in the HTML files. To edit:
-
-1. **Homepage** (`index.html`):
-   - Hero section, purpose, practices, Foundry projects
-
-2. **Hubs Page** (`hubs.html`):
-   - Lab, Studio, and Foundry descriptions
-
-3. **Interest Form** (`express-interest.html`):
-   - Contact form for people wanting to join
-
-### Updating Styles
-
-Styles are embedded in each HTML file within `<style>` tags. The design uses CSS custom properties (variables) for easy theming:
-
-```css
-:root {
-  --bg: #fbfaf8;          /* main background */
-  --bg-alt: #f7f6f4;      /* section alt background */
-  --accent: #111211;      /* primary accent (dark) */
-  --muted: #716f6a;       /* muted text */
-  /* ... more variables */
-}
-```
-
-### Adding Images/Logos
-
-1. Add your image files to the `public/logos/` directory
-2. Reference them in HTML with `/logos/your-image.png`
-
-### After Making Changes
-
-After editing files at the root level (index.html, hubs.html, express-interest.html), you need to sync them to the public folder for deployment:
-
-```sh
-# Sync HTML files to public folder
-npm run sync
-```
-
-Or manually:
-
-```sh
-cp *.html public/
-```
-
-Then commit and push:
-
-```sh
-git add .
-git commit -m "Your change description"
-git push
-```
-
-**Note:** For local development with `npm run dev`, you can edit the files at the root and see changes immediately. The sync to `public/` is only needed before deployment.
-
 ## Contributing
 
 We welcome contributions! To contribute:
