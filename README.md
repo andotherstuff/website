@@ -75,7 +75,7 @@ Alternatively, you can build the project and deploy the dist folder:
 npm run build
 
 # Deploy the dist folder
-wrangler pages deploy dist --project-name=aos-collective
+wrangler pages deploy dist --project-name=nostr-future-collective
 ```
 
 ## Contributing

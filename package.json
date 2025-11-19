@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "sync": "cp *.html public/",
-    "deploy": "wrangler pages deploy public --project-name=aos-collective"
+    "deploy": "wrangler pages deploy public --project-name=nostr-future-collective"
   },
   "keywords": [
     "freedom-tech",
