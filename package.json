@@ -1,1 +1,24 @@
-{"name":"aos-collective-website","version":"1.0.0","description":"AOS Collective - Technology for Human Thriving","type":"module","scripts":{"dev":"python3 -m http.server 8000","sync":"cp *.html public/","deploy":"wrangler pages deploy public --project-name=aos-collective"},"keywords":["freedom-tech","aos-collective","nostr","decentralized"],"author":"AOS Collective","license":"MIT"}
+{
+  "name": "aos-collective-website",
+  "version": "1.0.0",
+  "description": "AOS Collective - Technology for Human Thriving",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync": "cp *.html public/",
+    "deploy": "wrangler pages deploy public --project-name=aos-collective"
+  },
+  "keywords": [
+    "freedom-tech",
+    "aos-collective",
+    "nostr",
+    "decentralized"
+  ],
+  "author": "AOS Collective",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^7.2.2"
+  }
+}

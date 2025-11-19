@@ -15,7 +15,7 @@ A simple, fast, and accessible static website for AOS Collective - building free
 ```
 .
 ├── index.html                  # Main landing page
-├── hubs.html                   # Lab, Studio, and Foundry information  
+├── hubs.html                   # Lab, Studio, and Foundry information
 ├── express-interest.html       # Contact/interest form
 ├── public/                     # Deployment directory
 │   ├── index.html             # (copy of root index.html)
@@ -53,42 +53,33 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 ## Local Development
 
-This is a static HTML website, so no build step is required! You can develop and preview it in multiple ways:
-
-### Method 1: Simple HTTP Server (Recommended)
-
-If you have Python installed:
+### Quick Start
 
 ```sh
-# Python 3
-python -m http.server 8000
+# Install dependencies
+npm install
 
-# Then open http://localhost:8000 in your browser
+# Start development server
+npm run dev
 ```
 
-Or with Node.js:
+This will start a Vite development server at http://localhost:8000 with hot module reloading. Changes to HTML files will automatically refresh the browser.
 
+### Alternative Methods
+
+**Using Python:**
 ```sh
-# Install a simple HTTP server globally (one time)
+python3 -m http.server 8000
+```
+
+**Using Node.js http-server:**
+```sh
 npm install -g http-server
-
-# Run the server
 http-server -p 8000
-
-# Then open http://localhost:8000 in your browser
 ```
 
-### Method 2: Open Directly in Browser
-
-You can simply open `index.html` directly in your browser. However, this method may have some limitations with loading assets depending on your browser's security settings.
-
-### Method 3: Using Shakespeare
-
-This project is designed to work with [Shakespeare](https://shakespeare.diy), an AI-powered website builder:
-
-1. Open the project in Shakespeare
-2. The preview will automatically load
-3. Make changes and see them reflected immediately
+**Using Shakespeare:**
+This project is designed to work with [Shakespeare](https://shakespeare.diy), an AI-powered website builder. Just open the project and the preview will automatically load.
 
 ## Deployment
 
@@ -115,7 +106,7 @@ This project is configured for automatic deployment to Cloudflare Pages via GitH
    git push origin main
    ```
 
-The GitHub Action will automatically deploy your changes to Cloudflare Pages.
+The GitHub Action will automatically deploy the `public/` directory to Cloudflare Pages.
 
 ### Manual Deployment
 
@@ -129,7 +120,17 @@ npm install -g wrangler
 wrangler login
 
 # Deploy
-wrangler pages deploy public --project-name=aos-collective
+npm run deploy
+```
+
+Alternatively, you can build the project and deploy the dist folder:
+
+```sh
+# Build the project (outputs to dist/)
+npm run build
+
+# Deploy the dist folder
+wrangler pages deploy dist --project-name=aos-collective
 ```
 
 ## Making Changes
@@ -138,12 +139,12 @@ wrangler pages deploy public --project-name=aos-collective
 
 All content is in the HTML files. To edit:
 
-1. **Homepage** (`index.html`): 
+1. **Homepage** (`index.html`):
    - Hero section, purpose, practices, Foundry projects
-   
+
 2. **Hubs Page** (`hubs.html`):
    - Lab, Studio, and Foundry descriptions
-   
+
 3. **Interest Form** (`express-interest.html`):
    - Contact form for people wanting to join
 
@@ -168,15 +169,14 @@ Styles are embedded in each HTML file within `<style>` tags. The design uses CSS
 
 ### After Making Changes
 
-After editing files at the root level (index.html, hubs.html, express-interest.html), copy them to the public folder:
+After editing files at the root level (index.html, hubs.html, express-interest.html), you need to sync them to the public folder for deployment:
 
 ```sh
-cp index.html public/index.html
-cp hubs.html public/hubs.html
-cp express-interest.html public/express-interest.html
+# Sync HTML files to public folder
+npm run sync
 ```
 
-Or use this convenience command:
+Or manually:
 
 ```sh
 cp *.html public/
@@ -189,6 +189,8 @@ git add .
 git commit -m "Your change description"
 git push
 ```
+
+**Note:** For local development with `npm run dev`, you can edit the files at the root and see changes immediately. The sync to `public/` is only needed before deployment.
 
 ## Custom Domain
 
