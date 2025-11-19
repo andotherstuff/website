@@ -693,48 +693,21 @@
       background: var(--bg-alt);
     }
 
-    .projects-scroll-wrapper {
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: thin;
-      scrollbar-color: var(--border) transparent;
-      padding-bottom: 1rem;
-      margin: 0 -1.5rem;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
     }
 
-    @media (max-width: 720px) {
-      .projects-scroll-wrapper {
-        margin: 0 -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+    @media (min-width: 720px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    .projects-scroll-wrapper::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .projects-scroll-wrapper::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .projects-scroll-wrapper::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 4px;
-    }
-
-    .projects-grid {
-      display: flex;
-      gap: 1.25rem;
-      min-width: max-content;
-    }
-
-    @media (max-width: 720px) {
+    @media (min-width: 1024px) {
       .projects-grid {
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -743,22 +716,23 @@
       border-radius: var(--radius-lg);
       background: var(--card);
       border: 1px solid var(--border);
-      padding: 1.25rem 1.2rem;
+      padding: 1.5rem;
       box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      min-width: 280px;
-      max-width: 280px;
-      flex-shrink: 0;
+      gap: 1rem;
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
     }
 
     @media (max-width: 720px) {
       .project-card {
-        min-width: 260px;
-        max-width: 260px;
-        padding: 1.1rem 1rem;
-        gap: 0.65rem;
+        padding: 1.25rem;
+        gap: 0.85rem;
       }
     }
 
@@ -1308,9 +1282,8 @@
             </p>
           </div>
 
-          <div class="projects-scroll-wrapper">
-            <div class="projects-grid">
-              <article class="project-card">
+          <div class="projects-grid">
+            <article class="project-card">
                 <div class="project-icon">
                   <img src="/logos/shakespeare.svg" alt="Shakespeare logo" />
                 </div>
@@ -1513,7 +1486,6 @@
                   <span class="project-tag">Nostr</span>
                 </div>
               </article>
-            </div>
           </div>
         </div>
       </section>
@@ -1558,6 +1530,33 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Shuffle array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // Randomize projects on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectsGrid = document.querySelector('.projects-grid');
+      if (projectsGrid) {
+        const projectCards = Array.from(projectsGrid.children);
+        const shuffledCards = shuffleArray(projectCards);
+
+        // Clear the grid
+        projectsGrid.innerHTML = '';
+
+        // Append shuffled cards
+        shuffledCards.forEach(card => {
+          projectsGrid.appendChild(card);
+        });
+      }
+    });
   </script>
 </body>
 </html>
