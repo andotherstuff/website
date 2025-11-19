@@ -10,8 +10,6 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 **URL**: https://andotherstuff.org
 
-**Preview**: https://new-aos-website.shakespeare.wtf/
-
 **Type**: Static HTML website
 
 ## Local Development
