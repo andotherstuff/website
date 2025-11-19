@@ -8,7 +8,7 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 ## Project Info
 
-**URL**: TBD (will be configured on Cloudflare Pages)
+**URL**: https://andotherstuff.org
 
 **Preview**: https://new-aos-website.shakespeare.wtf/
 
@@ -98,7 +98,7 @@ MIT
 ## Contact
 
 For questions or to get involved with AOS Collective:
-- Visit our website (TBD)
+- Visit our website: [andotherstuff.org](https://andotherstuff.org)
 - Fill out the [interest form](express-interest.html)
 - Check out our [GitHub](https://github.com/andotherstuff/)
 
