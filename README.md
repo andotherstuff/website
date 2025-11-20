@@ -10,7 +10,24 @@ A simple, fast, and accessible static website for AOS Collective - building free
 
 **URL**: https://andotherstuff.org
 
-**Type**: Static HTML website
+**Type**: Static HTML website with unified layout
+
+## Website Structure
+
+The website uses a **unified layout system** with consistent header and footer across all pages:
+
+- `index.html` - Home page
+- `about-us.html` - About Us (Purpose, Practices, Hubs)
+- `express-interest.html` - Join Us / Express Interest form
+- `public/hubs.html` - Detailed hub information
+
+### Shared Components
+
+- **Header**: Sticky navigation with logo, site title, and main navigation links
+- **Footer**: GitHub link and footer navigation
+- **Styles**: Shared CSS in `styles.css` with page-specific styles as needed
+
+See [LAYOUT_SYSTEM.md](LAYOUT_SYSTEM.md) for detailed documentation.
 
 ## Local Development
 

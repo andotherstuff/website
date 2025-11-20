@@ -2,13 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AOS Collective – Technology for Human Thriving</title>
+  <title>AOS – Technology for Human Thriving</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="AOS Collective builds freedom tech that enhances, explores, and empowers human thriving through open, decentralized systems."
+    content="AOS builds freedom tech that enhances, explores, and empowers human thriving through open, decentralized systems."
   />
-  <link rel="icon" type="image/svg+xml" href="/AOS_Official.svg" />
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andotherstuff.org/" />
+  <meta property="og:title" content="AOS – Technology for Human Thriving" />
+  <meta property="og:description" content="AOS builds freedom tech that enhances, explores, and empowers human thriving through open, decentralized systems." />
+  <meta property="og:image" content="https://andotherstuff.org/aos-og-card.png" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://andotherstuff.org/" />
+  <meta name="twitter:title" content="AOS – Technology for Human Thriving" />
+  <meta name="twitter:description" content="AOS builds freedom tech that enhances, explores, and empowers human thriving through open, decentralized systems." />
+  <meta name="twitter:image" content="https://andotherstuff.org/aos-og-card.png" />
+
+  <link rel="icon" type="image/png" href="/assets/aos-icon-B9uXNUxh.png" />
+  <link rel="apple-touch-icon" href="/assets/aos-icon-B9uXNUxh.png" />
 
   <style>
     :root {
@@ -192,6 +208,108 @@
     @media (max-width: 720px) {
       .hero {
         padding: 2rem 0 1.5rem;
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-grid {
+        gap: 2rem;
+      }
+    }
+
+    .hero-name-box {
+      margin-top: 2.3rem;
+      padding: 1.6rem 1.5rem 1.7rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0)) border-box,
+        var(--card);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle diagonal "corner glow" */
+    .hero-name-box::before {
+      content: "";
+      position: absolute;
+      inset: -50px auto auto -50px;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle at 100% 100%, rgba(0,0,0,0.07), transparent 60%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    /* subtle vertical rule on the right */
+    .hero-name-box::after {
+      content: "";
+      position: absolute;
+      top: 1.4rem;
+      right: 1.3rem;
+      width: 1px;
+      height: 60%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.16),
+        rgba(0, 0, 0, 0)
+      );
+      opacity: 0.7;
+    }
+
+    .hero-name-kicker {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(0,0,0,0.58);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-name-title {
+      font-size: 1.02rem;
+      margin: 0 0 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-alt);
+    }
+
+    .hero-name-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-name-body:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .hero-name-italic {
+      font-style: italic;
+      color: var(--accent-alt);
+    }
+
+    /* mobile adjustment */
+    @media (max-width: 720px) {
+      .hero-name-box {
+        margin-top: 1.8rem;
+        padding: 1.4rem 1.3rem 1.5rem;
+        border-radius: 16px;
       }
     }
 
@@ -591,48 +709,21 @@
       background: var(--bg-alt);
     }
 
-    .projects-scroll-wrapper {
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: thin;
-      scrollbar-color: var(--border) transparent;
-      padding-bottom: 1rem;
-      margin: 0 -1.5rem;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
     }
 
-    @media (max-width: 720px) {
-      .projects-scroll-wrapper {
-        margin: 0 -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+    @media (min-width: 720px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    .projects-scroll-wrapper::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .projects-scroll-wrapper::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .projects-scroll-wrapper::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 4px;
-    }
-
-    .projects-grid {
-      display: flex;
-      gap: 1.25rem;
-      min-width: max-content;
-    }
-
-    @media (max-width: 720px) {
+    @media (min-width: 1024px) {
       .projects-grid {
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -641,22 +732,23 @@
       border-radius: var(--radius-lg);
       background: var(--card);
       border: 1px solid var(--border);
-      padding: 1.25rem 1.2rem;
+      padding: 1.5rem;
       box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      min-width: 280px;
-      max-width: 280px;
-      flex-shrink: 0;
+      gap: 1rem;
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
     }
 
     @media (max-width: 720px) {
       .project-card {
-        min-width: 260px;
-        max-width: 260px;
-        padding: 1.1rem 1rem;
-        gap: 0.65rem;
+        padding: 1.25rem;
+        gap: 0.85rem;
       }
     }
 
@@ -1042,17 +1134,16 @@
           <a href="#top" class="brand">
             <div class="brand-logo-wrap" aria-hidden="true">
               <!-- Make sure this file sits next to index.html -->
-              <img src="/AOS_Official.svg" alt="AOS Collective logo" class="brand-logo" />
+              <img src="/assets/AOS_Official-C7lpj67n.svg" alt="AOS logo" class="brand-logo" />
             </div>
             <div class="brand-text">
-              <span>AOS Collective</span>
+              <span>And Other Stuff</span>
               <span>Technology for Human Thriving</span>
             </div>
           </a>
           <div class="nav-links">
-            <a href="#purpose">Our Purpose</a>
-            <a href="#practices">Our Practices</a>
-            <a href="hubs.html">Our Hubs</a>
+            <a href="about-us.html">About Us</a>
+            <a href="#foundry-projects">Projects</a>
             <a href="express-interest.html">Join Us</a>
             <a href="https://opencollective.com/aos-collective" target="_blank" rel="noopener noreferrer">
               Donate <span>↗</span>
@@ -1073,116 +1164,19 @@
               </h1>
 
               <p class="hero-lede">
-                AOS Collective builds and stewards freedom tech—tools, protocols, and applications
-                that enhance, enable, and extend human liberty. We enhance the Commons, explore the art of the possible, and empower people to build their own futures. Our work flows through three interconnected <a href="hubs.html">hubs</a>—the Lab, the Studio, and the Foundry—where ideas move from exploration to real-world impact.
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Purpose -->
-      <section id="purpose" class="purpose">
-        <div class="shell">
-          <div class="section-header">
-            <div class="section-kicker">Purpose</div>
-            <h2 class="section-title">We exist to support human flourishing.</h2>
-            <p class="section-body">
-              Human beings cannot thrive without freedom—freedom to speak, connect, assemble,
-              transact, and build. The modern internet concentrates power inside closed platforms and
-              intermediaries that can censor, surveil, and extract. AOS Collective exists to build a
-              different foundation: open, permissionless systems that keep agency with people and
-              communities.
-            </p>
-          </div>
-
-          <div class="purpose-intro">
-            <p>
-              We build tools and systems that help people and communities thrive through open, permissionless technologies—things anyone can use, adapt, and build on—so that freedom and creativity can grow without barriers.
-            </p>
-          </div>
-
-          <div class="purpose-grid">
-            <div class="purpose-card">
-              <h4>We build with protocols designed for people</h4>
-              <p>
-                Open systems give communities real control over how they gather, collaborate, and create. By contributing to these ecosystems, we help strengthen the foundation for durable, people-powered technology.
+                And Other Stuff (AOS) is a collective of people who build, imagine, organize, and experiment. Together, we create and steward freedom tech—open tools, protocols, and applications that strengthen human liberty. We enhance the Commons, explore the art of the possible, and empower people to build their own futures. Our work flows through three interconnected <a href="about-us.html#hubs">hubs</a>—the Lab, the Studio, and the Foundry—where ideas move from exploration to real-world impact.
               </p>
             </div>
 
-            <div class="purpose-card">
-              <h4>We invest in the Commons</h4>
-              <p>
-                Everything we make—code, research, frameworks, and onboarding pathways—is shared openly. When knowledge and infrastructure are accessible, the entire ecosystem benefits.
+            <div class="hero-name-box" aria-labelledby="hero-name-title">
+              <div class="hero-name-kicker">The story behind our name</div>
+              <h2 class="hero-name-title" id="hero-name-title">
+                Why "And Other Stuff"?
+              </h2>
+              <p class="hero-name-body">
+                Our name is an homage to the open Nostr protocol, whose acronym stands for <span class="hero-name-italic">Notes and Other Stuff Transmitted by Relays</span>. We chose it because so much of the magic of open protocols lives in the "other stuff"—the unexpected ideas, tools, and communities that emerge when technology is open and permissionless. Open systems support more than simple social posts; they enable new forms of connection, collaboration, creativity, and community infrastructure. AOS exists to explore that broader landscape and help bring those possibilities to life.
               </p>
             </div>
-
-            <div class="purpose-card">
-              <h4>We collaborate with builders and communities</h4>
-              <p>
-                Our role is to support, uplift, and walk alongside teams. We help refine ideas, shape products, and explore governance and support models that fit their values and goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Practices -->
-      <section id="practices" class="pillars">
-        <div class="shell">
-          <div class="section-header">
-            <div class="section-kicker">Our approach</div>
-            <h2 class="section-title">Our Core Practices</h2>
-            <p class="section-body">
-              AOS Collective advances the freedom-tech ecosystem through three core practices.
-              We strengthen the foundations, demonstrate what’s possible, and equip people with
-              the tools and support to build their own visions.
-            </p>
-          </div>
-
-          <div class="pillars-grid">
-            <article class="pillar">
-              <h3 class="pillar-title">Enhance</h3>
-              <p class="pillar-body">
-                We create components, bridges, and infrastructure that expand what’s possible with
-                existing protocols.
-              </p>
-              <ul class="pillar-list">
-                <li>Protocol extensions and reference implementations</li>
-                <li>UX patterns and onboarding flows for new users</li>
-                <li>Identity, key-management, and web-of-trust primitives</li>
-                <li>Trust &amp; safety models that preserve user agency</li>
-              </ul>
-            </article>
-
-            <article class="pillar">
-              <h3 class="pillar-title">Explore</h3>
-              <p class="pillar-body">
-                We build experiments, prototypes, and full applications that show what a free,
-                decentralized internet can look like at both the web and infrastructure layers.
-              </p>
-              <ul class="pillar-list">
-                <li>Decentralized communities, messaging, and collaboration tools</li>
-                <li>Local-first and offline-capable experiences</li>
-                <li>New models for governance and coordination</li>
-                <li>Game, finance, and social apps that cross ecosystems</li>
-              </ul>
-            </article>
-
-            <article class="pillar">
-              <h3 class="pillar-title">Empower</h3>
-              <p class="pillar-body">
-                We equip builders, activists, and communities with the tools they need—from AI
-                coding agents to playbooks and governance patterns—to realize their own ideas.
-              </p>
-              <ul class="pillar-list">
-                <li>AI assistants and agents (like Shakespeare) for rapid prototyping</li>
-                <li>Developer kits, libraries, and reusable scaffolds</li>
-                <li>Workshops, learning content, and facilitation support</li>
-                <li>Governance and operating-model guidance for long-term stewardship</li>
-              </ul>
-            </article>
           </div>
         </div>
       </section>
@@ -1198,18 +1192,17 @@
             </p>
           </div>
 
-          <div class="projects-scroll-wrapper">
-            <div class="projects-grid">
-              <article class="project-card">
+          <div class="projects-grid">
+            <article class="project-card">
                 <div class="project-icon">
-                  <img src="/logos/shakespeare.svg" alt="Shakespeare logo" />
+                  <img src="/assets/shakespeare-i-hUm6OK.svg" alt="Shakespeare logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
                     <a href="https://shakespeare.diy" target="_blank" rel="noopener noreferrer">Shakespeare</a>
                   </h3>
                   <a href="https://gitlab.com/soapbox-pub/shakespeare" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Shakespeare on GitLab">
-                    <img src="/logos/gitlab-logo-600-rgb.svg" alt="GitLab logo" width="40" height="40" />
+                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20380%20380'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23171321;}%3c/style%3e%3c/defs%3e%3cg%20id='LOGO'%3e%3cpath%20class='cls-1'%20d='M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z'/%3e%3c/g%3e%3c/svg%3e" alt="GitLab logo" width="40" height="40" />
                   </a>
                 </div>
                 <p class="project-description">
@@ -1226,7 +1219,7 @@
 
               <article class="project-card">
                 <div class="project-icon">
-                  <img src="/logos/Divine-512.png" alt="diVine logo" />
+                  <img src="/assets/Divine-512-CqeKGjCO.png" alt="diVine logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
@@ -1252,7 +1245,7 @@
 
               <article class="project-card">
                 <div class="project-icon project-icon-whitenoise">
-                  <img src="/logos/whitenoise.svg" alt="White Noise logo" />
+                  <img src="data:image/svg+xml,%3csvg%20width='58'%20height='44'%20viewBox='0%200%2058%2044'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Logomark'%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2044V0H14.7304V13.4775L21.2348%200H35.9652V13.4775L42.4696%200H57.2V44H42.4696V30.5225L35.9652%2044H21.2348V30.5225L14.7304%2044H0ZM12.4348%202.29565H2.29565V39.2432L12.4348%2018.2342V2.29565ZM44.7652%2041.7043H54.9044V4.75676L44.7652%2025.7658V41.7043ZM34.5241%2041.7043L53.5431%202.29565H43.9107L24.8917%2041.7043H34.5241ZM32.3083%202.29565H22.6759L3.65691%2041.7043H13.2893L32.3083%202.29565ZM33.6696%204.75676L23.5304%2025.7658V39.2432L33.6696%2018.2342V4.75676Z'%20fill='%23F9F9F9'%20style='fill:%23F9F9F9;fill:color(display-p3%200.9765%200.9765%200.9765);fill-opacity:1;'/%3e%3c/svg%3e" alt="White Noise logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
@@ -1278,7 +1271,7 @@
 
               <article class="project-card">
                 <div class="project-icon">
-                  <img src="/logos/flotilla.webp" alt="Flotilla logo" />
+                  <img src="/assets/flotilla-Bi2bYAWZ.webp" alt="Flotilla logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
@@ -1304,7 +1297,7 @@
 
               <article class="project-card">
                 <div class="project-icon">
-                  <img src="/logos/cashu.png" alt="Cashu logo" />
+                  <img src="/assets/cashu-BvIRmXIQ.png" alt="Cashu logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
@@ -1330,7 +1323,7 @@
 
               <article class="project-card">
                 <div class="project-icon">
-                  <img src="/logos/chorus.svg" alt="Chorus logo" />
+                  <img src="/assets/chorus-BM0uJ7Nb.svg" alt="Chorus logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
@@ -1356,7 +1349,7 @@
 
               <article class="project-card">
                 <div class="project-icon">
-                  <img src="/logos/bitchat.png" alt="bitchat logo" />
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAY1BMVEUAAAD///9jY2Pb29vz8/Pk5ORAQEDIyMjCwsLq6uovLy81NTWHh4f39/eampqjo6O1tbVNTU0VFRUjIyNFRUVeXl5paWl9fX2vr6/U1NS7u7spKSkPDw9UVFRubm5zc3ORkZH+cJ9vAAABWklEQVRoge2W25KDIAxApeIFb2i1alu39f+/cgNeBqrr7rThZSfnRQjmTBVM43kEQRAEQRAEQXzAOV24m+E6MUkHCA1NuKEZDuUtW8iD8rKGb8yihVDFdqgO5Sfr3vhA3rwn50KRq5v9OVyyHNAPpK5KHooZFZ6HvPlVnulR0goYF1P4rreBMxbVanA2U3zGgkPnjhyMIOPmopJvU96T6zdtPiiqXMLkYiyiykuHv1xtoDAXMeSdHg0PdVpO2HLjnHfWIoZ8LQDyZRFTDh/oF7q8aCrg0YOLPbHly2lJIC1PHMm9ECa9K7kn7DxcORSXvHYl72EWupQbxQVXfrWPC6q8Zu42NA1gYpYADHnZZVmXyasqAHzqRJ6FAmqZP8JVhmbKu7WFiXQKx9vW4lM5L5YOaqdvWQle/lJ+poriiZvMjJI4LmFNZPU+o5Tj3+QEQRAEQRAEQfxTvgGueBCzF4t+PAAAAABJRU5ErkJggg==" alt="bitchat logo" />
                 </div>
                 <div class="project-header">
                   <h3 class="project-title">
@@ -1403,7 +1396,6 @@
                   <span class="project-tag">Nostr</span>
                 </div>
               </article>
-            </div>
           </div>
         </div>
       </section>
@@ -1416,7 +1408,7 @@
               <div class="section-kicker">Join the collective</div>
               <h2 class="section-title">You can just do things.</h2>
               <p class="section-body">
-                AOS Collective runs on permissionless play—anyone can explore, tinker, and create without waiting for permission. If you're drawn to human freedom, open systems, or building for the Commons, you're one of us. Start small or dive deep: join an existing project, bring a problem to the Lab, or collaborate with the Studio and the Foundry on something entirely your own. You don't need technical expertise—just the spark.
+                AOS runs on permissionless play—anyone can explore, tinker, and create without waiting for permission. If you're drawn to human freedom, open systems, or building for the Commons, you're one of us. Start small or dive deep: join an existing project, bring a problem to the Lab, or collaborate with the Studio and the Foundry on something entirely your own. You don't need technical expertise—just the spark.
               </p>
             </div>
             <div class="join-cta">
@@ -1432,12 +1424,18 @@
     <footer>
       <div class="shell">
         <div class="footer-inner">
-          <div>© <span id="year"></span> AOS Collective. Built for human thriving.</div>
+          <div>
+            <a href="https://github.com/andotherstuff" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              Open Source
+            </a>
+          </div>
           <div class="footer-links">
-            <a href="#top">Home</a>
-            <a href="#purpose">Our Purpose</a>
-            <a href="#practices">Our Practices</a>
-            <a href="hubs.html">Our Hubs</a>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="index.html#foundry-projects">Projects</a>
             <a href="express-interest.html">Join Us</a>
             <a href="https://opencollective.com/aos-collective" target="_blank" rel="noopener noreferrer">Donate</a>
           </div>
@@ -1447,7 +1445,32 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Shuffle array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // Randomize projects on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectsGrid = document.querySelector('.projects-grid');
+      if (projectsGrid) {
+        const projectCards = Array.from(projectsGrid.children);
+        const shuffledCards = shuffleArray(projectCards);
+
+        // Clear the grid
+        projectsGrid.innerHTML = '';
+
+        // Append shuffled cards
+        shuffledCards.forEach(card => {
+          projectsGrid.appendChild(card);
+        });
+      }
+    });
   </script>
 </body>
 </html>
