@@ -72,6 +72,17 @@
       outline-offset: 3px;
     }
 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
     .page {
       min-height: 100vh;
       display: flex;
@@ -403,6 +414,7 @@
       background: var(--bg);
       font-size: 0.8rem;
       color: var(--muted);
+      margin-top: auto;
     }
 
     @media (max-width: 720px) {
@@ -473,6 +485,8 @@
   </style>
 </head>
 <body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
   <div class="page">
     <header>
       <div class="shell">
@@ -498,7 +512,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <div class="shell">
         <div class="form-section">
           <div class="section-header">
@@ -510,7 +524,14 @@
           </div>
 
           <div class="interest-form">
-            <form id="interestForm" action="#" method="POST">
+            <!-- 
+              SETUP: Replace YOUR_FORMSPREE_ENDPOINT below with your Formspree form endpoint.
+              Get it from https://formspree.io/ after creating a form for interest@andotherstuff.org
+            -->
+            <form id="interestForm" action="https://formspree.io/f/xjklevep" method="POST">
+              <input type="hidden" name="_subject" value="New Interest Form Submission - AOS">
+              <input type="hidden" name="_replyto" value="">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
               <div class="form-group">
                 <label for="name">Name *</label>
                 <input type="text" id="name" name="name" required>
@@ -595,47 +616,66 @@
   <script>
     // Handle interest form submission
     document.getElementById("interestForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+      const form = this;
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+      
+      // Set reply-to field to the email address
+      const emailInput = form.querySelector('#email');
+      const replyToField = form.querySelector('input[name="_replyto"]');
+      if (emailInput && replyToField) {
+        replyToField.value = emailInput.value;
+      }
 
-      // Get form data
-      const formData = new FormData(this);
+      // Disable submit button and show loading state
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
 
-      // Get all checked interests (checkboxes)
-      const interests = formData.getAll('interest');
+      // Format interests for email - collect all checked interests
+      const interests = Array.from(form.querySelectorAll('input[name="interest"]:checked'))
+        .map(cb => cb.nextElementSibling.textContent.trim())
+        .join(', ');
 
-      // Build data object
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        interests: interests,
-        message: formData.get('message')
-      };
+      // Add formatted interests as a hidden field for Formspree
+      let interestsField = form.querySelector('input[name="interests"]');
+      if (!interestsField) {
+        interestsField = document.createElement('input');
+        interestsField.type = 'hidden';
+        interestsField.name = 'interests';
+        form.appendChild(interestsField);
+      }
+      interestsField.value = interests || 'None selected';
 
-      // Here you would typically send the data to your backend
-      // For now, we'll just show an alert and log to console
-      console.log("Form submission:", data);
-
-      // Show success message
-      alert("Thank you for your interest! We'll be in touch soon.");
-
-      // Reset form
-      this.reset();
-
-      // In production, you would send this to your backend:
-      // fetch('/api/interest', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data)
-      // })
-      // .then(response => response.json())
-      // .then(data => {
-      //   alert("Thank you for your interest! We'll be in touch soon.");
-      //   this.reset();
-      // })
-      // .catch(error => {
-      //   alert("Something went wrong. Please try again or contact us directly.");
-      // });
+      // Form will submit normally to Formspree
+      // Formspree will handle the email sending and redirect
     });
+
+    // Handle successful form submission (Formspree redirects after submission)
+    // You can customize the redirect URL by adding ?next=/thank-you.html to the form action
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+      showSuccessMessage();
+    }
+
+    function showSuccessMessage() {
+      const form = document.getElementById("interestForm");
+      if (form) {
+        // Remove any existing success message
+        const existingMsg = form.parentElement.querySelector('.success-message');
+        if (existingMsg) {
+          existingMsg.remove();
+        }
+        
+        const successMsg = document.createElement('div');
+        successMsg.className = 'success-message';
+        successMsg.style.cssText = 'background: #d4edda; color: #155724; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #c3e6cb;';
+        successMsg.textContent = "✓ Thank you for your interest! We'll be in touch soon.";
+        form.parentElement.insertBefore(successMsg, form);
+        
+        // Scroll to success message
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
   </script>
 </body>
 </html>
