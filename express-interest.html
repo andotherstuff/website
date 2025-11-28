@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Express your interest in joining AOS and contributing to freedom tech."
+    content="Express your interest in working with AOS Foundry, Lab, or Studio in the freedom-tech ecosystem."
   />
 
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://andotherstuff.org/express-interest.html" />
   <meta property="og:title" content="Express Interest – AOS" />
-  <meta property="og:description" content="Express your interest in joining AOS and contributing to freedom tech." />
+  <meta property="og:description" content="Express your interest in working with AOS Foundry, Lab, or Studio in the freedom-tech ecosystem." />
   <meta property="og:image" content="https://andotherstuff.org/aos-og-card.png" />
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://andotherstuff.org/express-interest.html" />
   <meta name="twitter:title" content="Express Interest – AOS" />
-  <meta name="twitter:description" content="Express your interest in joining AOS and contributing to freedom tech." />
+  <meta name="twitter:description" content="Express your interest in working with AOS Foundry, Lab, or Studio in the freedom-tech ecosystem." />
   <meta name="twitter:image" content="https://andotherstuff.org/aos-og-card.png" />
 
   <link rel="icon" type="image/png" href="/aos-icon.png" />
@@ -408,6 +408,10 @@
       transform: translateY(0);
     }
 
+    .hidden {
+      display: none;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 0 1.8rem;
@@ -519,7 +523,7 @@
             <div class="section-kicker">Join the collective</div>
             <h1 class="section-title">Express Interest</h1>
             <p class="section-body">
-              Interested in working with AOS? Fill out this form and we'll get back to you. You can also explore our <a href="https://github.com/andotherstuff/" target="_blank" rel="noopener noreferrer">GitHub</a> to discover open-source projects you can contribute to right now.
+              Interested in working with AOS Foundry, Lab, or Studio? Share a bit about yourself or your project, and we’ll follow up to explore where we can best support you. You can also explore our <a href="https://github.com/andotherstuff/" target="_blank" rel="noopener noreferrer">GitHub</a> to discover open-source projects you can contribute to right now.
             </p>
           </div>
 
@@ -532,58 +536,94 @@
               <input type="hidden" name="_subject" value="New Interest Form Submission - AOS">
               <input type="hidden" name="_replyto" value="">
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
               <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Name or alias *</label>
+                <input type="text" id="name" name="name" required placeholder="You can use a pseudonym if that’s safer.">
               </div>
+
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+                <label for="contact">Preferred contact handle *</label>
+                <input type="text" id="contact" name="contact" required placeholder="Email, Nostr npub, or another safe way to reach you">
               </div>
+
               <div class="form-group">
-                <label>What I'm interested in:</label>
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="email" placeholder="Only if this is a safe way to reach you">
+              </div>
+
+              <div class="form-group">
+                <label>How are you reaching out today? (select all that apply) *</label>
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="developer">
-                    <span>Contributing as a developer/engineer</span>
+                    <input type="checkbox" name="role_type" value="project">
+                    <span>I’m exploring support for a project or idea.</span>
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="designer">
-                    <span>Contributing as a designer/researcher</span>
+                    <input type="checkbox" name="role_type" value="contributor">
+                    <span>I want to contribute as a collaborator or service provider (Studio).</span>
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="community">
-                    <span>Community building & organizing</span>
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="content">
-                    <span>Writing, education, or facilitation</span>
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="founder">
-                    <span>Starting a new project</span>
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="partner">
-                    <span>Partnering with Lab/Studio/Foundry</span>
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" name="interest" value="other">
-                    <span>Other</span>
+                    <input type="checkbox" name="role_type" value="unsure">
+                    <span>I’m not sure yet – I’d like help figuring it out.</span>
                   </label>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="message">Tell us more (optional)</label>
-                <textarea id="message" name="message" placeholder="What brings you to AOS Collective? What would you like to work on?"></textarea>
+
+              <!-- Project / idea fields -->
+              <div class="form-group hidden" id="project-fields">
+                <label for="project-description">Project or idea (if applicable)</label>
+                <textarea id="project-description" name="project_description" placeholder="Briefly describe your project or idea, and who it’s for."></textarea>
+
+                <label for="project-goal" style="margin-top:0.8rem;">What is your goal with this project or idea?</label>
+                <textarea id="project-goal" name="project_goal" placeholder="What are you hoping this work will make possible?"></textarea>
+
+                <label for="project-success" style="margin-top:0.8rem;">What does success look like for you?</label>
+                <textarea id="project-success" name="project_success" placeholder="What outcomes would feel meaningful for you and your community?"></textarea>
+
+                <label for="project-support" style="margin-top:0.8rem;">What encouragement, help, or support do you need?</label>
+                <textarea id="project-support" name="project_support" placeholder="What’s getting in the way right now, and where might we be able to help?"></textarea>
               </div>
+
+              <!-- Contributor / service provider fields -->
+              <div class="form-group hidden" id="contributor-fields">
+                <label for="skills">What skills or services do you offer?</label>
+                <textarea id="skills" name="skills" placeholder="Product, research, design, dev, infra, organizing, operations, etc."></textarea>
+
+                <label for="experience" style="margin-top:0.8rem;">Relevant experience or examples (optional)</label>
+                <textarea id="experience" name="experience" placeholder="Anything that helps us understand how you like to work. Links are welcome."></textarea>
+
+                <label for="collab" style="margin-top:0.8rem;">Preferred ways to collaborate</label>
+                <textarea id="collab" name="collaboration_preferences" placeholder="Async/sync, short sprints, advisory, pseudonymous work, etc."></textarea>
+
+                <label for="availability" style="margin-top:0.8rem;">Availability</label>
+                <textarea id="availability" name="availability" placeholder="For example: a few hours a month, weekends, between projects, etc."></textarea>
+              </div>
+
+              <!-- General / extra info -->
+              <div class="form-group">
+                <label for="timezone">Timezone or region (optional)</label>
+                <input type="text" id="timezone" name="timezone" placeholder="For example: UTC-6, West Africa, Central Europe">
+              </div>
+
+              <div class="form-group">
+                <label for="safety">Safety, privacy, or visibility considerations (optional)</label>
+                <textarea id="safety" name="safety" placeholder="If there’s anything we should be mindful of for your safety or privacy, you can share it here."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Anything else you’d like us to know? (optional)</label>
+                <textarea id="message" name="message" placeholder="Share whatever feels helpful or clarifying."></textarea>
+              </div>
+
               <div class="privacy-statement">
                 <p>
-                  <strong>Privacy Statement:</strong> We respect your privacy. The information you provide will be used solely to connect with you about collaboration opportunities within our ecosystem. We will not share, sell, or use your information for any other purpose.
+                  <strong>Privacy &amp; safety:</strong> We use the information you share only to understand how we might work together and to route your interest into the Foundry, Lab, or Studio. We welcome pseudonyms and non-email contact if that’s safer for you. We won’t sell your information or use it for unrelated purposes.
                 </p>
               </div>
+
               <div class="form-submit">
-                <button type="submit" class="btn-primary">Submit</button>
+                <button type="submit" class="btn-primary">Share my interest</button>
               </div>
             </form>
           </div>
@@ -614,44 +654,77 @@
   </div>
 
   <script>
+    // Toggle conditional fields based on role_type checkboxes
+    const roleCheckboxes = document.querySelectorAll('input[name="role_type"]');
+    const projectFields = document.getElementById('project-fields');
+    const contributorFields = document.getElementById('contributor-fields');
+
+    function handleRoleChange() {
+      const selectedValues = Array.from(roleCheckboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+      if (selectedValues.includes('project')) {
+        projectFields.classList.remove('hidden');
+      } else {
+        projectFields.classList.add('hidden');
+      }
+
+      if (selectedValues.includes('contributor')) {
+        contributorFields.classList.remove('hidden');
+      } else {
+        contributorFields.classList.add('hidden');
+      }
+    }
+
+    roleCheckboxes.forEach(cb => {
+      cb.addEventListener('change', handleRoleChange);
+    });
+
     // Handle interest form submission
     document.getElementById("interestForm").addEventListener("submit", function(e) {
       const form = this;
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton.textContent;
       
-      // Set reply-to field to the email address
+      // Validate that at least one role_type checkbox is selected
+      const selectedRoles = Array.from(form.querySelectorAll('input[name="role_type"]:checked'))
+        .map(cb => cb.value);
+
+      if (selectedRoles.length === 0) {
+        e.preventDefault();
+        alert('Please select at least one option for how you are reaching out.');
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+        return;
+      }
+
+      // Set reply-to field to the email address if provided
       const emailInput = form.querySelector('#email');
       const replyToField = form.querySelector('input[name="_replyto"]');
-      if (emailInput && replyToField) {
-        replyToField.value = emailInput.value;
+      if (emailInput && replyToField && emailInput.value.trim() !== "") {
+        replyToField.value = emailInput.value.trim();
+      } else if (replyToField) {
+        replyToField.value = "";
       }
 
       // Disable submit button and show loading state
       submitButton.disabled = true;
       submitButton.textContent = 'Sending...';
 
-      // Format interests for email - collect all checked interests
-      const interests = Array.from(form.querySelectorAll('input[name="interest"]:checked'))
-        .map(cb => cb.nextElementSibling.textContent.trim())
-        .join(', ');
-
-      // Add formatted interests as a hidden field for Formspree
-      let interestsField = form.querySelector('input[name="interests"]');
-      if (!interestsField) {
-        interestsField = document.createElement('input');
-        interestsField.type = 'hidden';
-        interestsField.name = 'interests';
-        form.appendChild(interestsField);
+      // Add a hidden field summarizing selected roles for Formspree emails
+      let roleSummaryField = form.querySelector('input[name="role_summary"]');
+      if (!roleSummaryField) {
+        roleSummaryField = document.createElement('input');
+        roleSummaryField.type = 'hidden';
+        roleSummaryField.name = 'role_summary';
+        form.appendChild(roleSummaryField);
       }
-      interestsField.value = interests || 'None selected';
-
+      roleSummaryField.value = selectedRoles.join(', ') || 'unspecified';
       // Form will submit normally to Formspree
-      // Formspree will handle the email sending and redirect
     });
 
     // Handle successful form submission (Formspree redirects after submission)
-    // You can customize the redirect URL by adding ?next=/thank-you.html to the form action
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('submitted') === 'true') {
       showSuccessMessage();
@@ -679,4 +752,3 @@
   </script>
 </body>
 </html>
-
