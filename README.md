@@ -29,6 +29,10 @@ The website uses a **unified layout system** with consistent header and footer a
 
 See [LAYOUT_SYSTEM.md](LAYOUT_SYSTEM.md) for detailed documentation.
 
+## Build System
+
+The project uses an automated sync process to keep source files (root directory) in sync with deployment files (`public/` directory). See [BUILD_PROCESS.md](BUILD_PROCESS.md) for detailed documentation on how this works.
+
 ## Local Development
 
 ```sh
@@ -40,6 +44,21 @@ npm run dev
 ```
 
 This will start a Vite development server at http://localhost:8000 with hot module reloading. Changes to HTML files will automatically refresh the browser.
+
+### Important: Editing HTML and CSS Files
+
+The website uses a **dual-directory structure**:
+- **Root directory** (`*.html`, `*.css`) - Source files for editing
+- **`public/` directory** - Deployed files (auto-synced from root)
+
+**When editing HTML or CSS files:**
+1. Edit files in the **root directory** (e.g., `express-interest.html`, `styles.css`)
+2. The files will automatically sync to `public/` during:
+   - Build process (`npm run build`)
+   - Deployment (`npm run deploy`)
+   - Manual sync (`npm run sync`)
+
+**Note:** The GitHub Actions workflow automatically syncs files before deployment, so you don't need to manually sync before pushing to the main branch. However, if you're testing locally or deploying manually, the sync will happen automatically.
 
 ## Deployment
 
@@ -99,12 +118,13 @@ We welcome contributions! To contribute:
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Make your changes
-4. Copy HTML files to public folder
-5. Test locally
-6. Commit your changes (`git commit -m 'Add some feature'`)
-7. Push to the branch (`git push origin feature/your-feature`)
-8. Open a Pull Request
+3. Make your changes to files in the **root directory** (not in `public/`)
+4. Test locally with `npm run dev`
+5. Commit your changes (`git commit -m 'Add some feature'`)
+6. Push to the branch (`git push origin feature/your-feature`)
+7. Open a Pull Request
+
+**Note:** You don't need to manually sync files to the `public/` directory - this happens automatically during the build and deployment process.
 
 ## License
 

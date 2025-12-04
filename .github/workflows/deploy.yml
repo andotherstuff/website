@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Sync HTML and CSS files to public directory
+        run: npm run sync
+
       - name: Install Wrangler
         run: npm install -g wrangler
 

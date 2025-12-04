@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run sync && vite build",
     "preview": "vite preview",
-    "sync": "cp *.html public/",
+    "sync": "cp *.html public/ && cp *.css public/",
+    "predeploy": "npm run sync",
     "deploy": "wrangler pages deploy public --project-name=nostr-future-collective"
   },
   "keywords": [
