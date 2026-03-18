@@ -1249,6 +1249,30 @@
 
               <article class="project-card">
                 <div class="project-icon">
+                  <img src="/logos/ditto.svg" alt="Ditto logo" />
+                </div>
+                <div class="project-header">
+                  <h3 class="project-title">
+                    <a href="https://ditto.pub" target="_blank" rel="noopener noreferrer">Ditto</a>
+                  </h3>
+                  <a href="https://gitlab.com/soapbox-pub/ditto" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Ditto on GitLab">
+                    <img src="/logos/gitlab-logo-600-rgb.svg" alt="GitLab logo" width="40" height="40" />
+                  </a>
+                </div>
+                <p class="project-description">
+                  A fully customizable social platform built on Nostr. Infinite content types, deep
+                  theming, and a bridge to the open web — Bluesky, Mastodon, and the broader Nostr
+                  ecosystem. Your identity, content, and connections belong to you.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Social</span>
+                  <span class="project-tag">Nostr</span>
+                  <span class="project-tag">Customization</span>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-icon">
                   <img src="/logos/Divine-512.png" alt="diVine logo" />
                 </div>
                 <div class="project-header">
@@ -1538,7 +1562,7 @@
     }
 
     // Randomize projects on page load
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', () => {
       const projectsGrid = document.querySelector('.projects-grid');
       if (projectsGrid) {
         const projectCards = Array.from(projectsGrid.children);
